@@ -1,0 +1,576 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container formpage">
+	<form action="test.php" method="POST">
+			<!--1. Name Start-->
+			<fieldset class="form-group">
+			    <label for="name">1. Name</label>
+			    <input type="text" class="form-control" name="name">
+			</fieldset>
+			<!--1. Name End-->
+
+			<fieldset class="form-group">
+			    <label for="date_of_birth">2. Date Of Birth</label>
+			    <input type="text" class="form-control" name="date_of_birth">
+			</fieldset>
+			<!--2. Date of Birth End-->
+
+			<!--3. Contact Number Start-->
+			<fieldset class="form-group">
+			    <label for="contact_number">3. Contact Number</label>
+			    <input type="text" class="form-control" name="contact_number">
+			</fieldset>
+			<!--3. Contact Number End-->
+
+			<!--4. Address Start-->
+			<fieldset class="form-group">
+			    <label for="address">4. Address</label>
+			    <input type="text" class="form-control" name="address">
+			</fieldset>
+			<!--4. Address End-->
+
+			<!--5. Gender Start-->
+			<div class="coloum">
+			    <label for="gender" class="control-label input-group">5. Gender</label>
+			    <div class="btn-group">
+			        <label class="btn btn-default">
+			            <input type="radio" name="gender" id="gender_male" value="Male">Male
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="gender" id="gender_female" value="Female">Female
+			        </label>
+			        <label class="btn btn-default ">
+			            <input type="radio" name="gender" id="gender_other" value="Other" >Other
+			            <fieldset class="form-group gh ">
+							<input type="text" class="form-control" name="gender" id="gender">
+						</fieldset>
+			        </label>
+			    </div>
+		  	</div>
+			<!--5. Gender End-->
+			<br>
+			<!--6. Highest Education Start-->
+			<div class="coloum">
+			    <label for="highest_education" class="control-label input-group">6. Highest Education</label>
+			    <div class="btn-group">
+			        <label class="btn btn-default">
+			            <input type="radio" name="highest_education" id="psc" value="PSC">PSC
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="highest_education" id="jsc" value="JSC">JSC
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="highest_education" id="ssc" value="SSC">SSC
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="highest_education" id="hsc" value="HSC">HSC
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="highest_education" id="undergraduate" value="Undergraduate">Undergraduate
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="highest_education" id="graduate" value="Graduate">Graduate
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="highest_education" id="post_graduate" value="Post-Graduate">Post-Graduate
+			        </label>
+			        <label class="btn btn-default show">
+			            <input type="radio" name="highest_education" id="he_other" value="" >Other
+			            <fieldset class="form-group gh ">
+							<input type="text" class="form-control" name="highest_education" id="">
+						</fieldset>
+			        </label>
+			    </div>
+		  	</div>
+			<!--6. Highest Education End-->
+
+			<!--7. Individual Income Start-->
+			<div class="main_individual_income">
+				<fieldset class="form-group">
+			    	<label for="individual_income">7. Individual Income (Per year)</label>
+			    	<input type="text" class="form-control" name="individual_income">
+				</fieldset>
+			</div>
+			<!--7. Individual Income End-->
+
+			<!--8. Family Income Start-->
+			<div class="main_family_income">
+				<fieldset class="form-group">
+			    	<label for="family_income">8.Family income (Per year)</label>
+			    	<input type="text" class="form-control" name="family_income">
+				</fieldset>
+			</div>
+			<!--8. Family Income End-->
+
+			<!--9. Occupation-->
+			<div class="coloum">
+			    <label for="occupation" class="control-label input-group">9. Occupation</label>
+			    <div class="btn-group">
+			        <label class="btn btn-default">
+			            <input type="radio" name="occupation" id="psc" value="Student">Student
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="occupation" id="jsc" value="Service Holder">Service Holder
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="occupation" id="ssc" value="Govt. Worker">Govt. Worker
+			        </label>
+			        <label class="btn btn-default show">
+			            <input type="radio" name="occupation" id="oc_other" value="" >Other
+			            <fieldset class="form-group gh extra">
+							<input type="text" class="form-control" name="occupation" id="">
+						</fieldset>
+			        </label>
+			    </div>
+		  	</div>
+			<!--9. Occupation End-->
+
+			<!--10. Religion Start-->
+			<div class="coloum">
+			    <label for="religion" class="control-label input-group">10. Religion</label>
+			    <div class="btn-group">
+			        <label class="btn btn-default">
+			            <input type="radio" name="religion" id="islam" value="Islam">Islam
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="religion" id="hindu" value="Hindu">Hindu
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="religion" id="christian" value="Islam">Christian
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="religion" id="buddhist" value="Buddhist">Buddhist
+			        </label>
+			        <label class="btn btn-default show">
+			            <input type="radio" name="religion" id="re_other" value="" >Other
+			            <fieldset class="form-group gh">
+							<input type="text" class="form-control" name="religion" id="">
+						</fieldset>
+			        </label>
+			    </div>
+		  	</div>
+			<!--10. Religion End-->
+
+			<!--11. Educational quality of your Father Start-->
+			<div class="main_father_education">
+				<fieldset class="form-group">
+			    	<label for="father_education">11. Educational quality of your Father</label>
+			    	<input type="text" class="form-control" name="father_education">
+				</fieldset>
+			</div>
+			<!--11. Educational quality of your Father End-->
+
+			<!--12. Educational quality of your Mother Start-->
+			<div class="main_mother_education">
+				<fieldset class="form-group">
+			    	<label for="mother_education">11. Educational quality of your Mother</label>
+			    	<input type="text" class="form-control" name="mother_education">
+				</fieldset>
+			</div>
+			<!--12. Educational quality of your Mother End-->
+
+			<!--13. Marital Status Start-->
+			<div class="coloum">
+			    <label for="marital_status" class="control-label input-group">13. Marital Status</label>
+			    <div class="btn-group">
+			        <label class="btn btn-default">
+			            <input type="radio" name="marital_status" id="married" value="Married">Married
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="marital_status" id="non_married" value="Non-Married">Non-Married
+			        </label>
+			    </div>
+		  	</div>
+			<!--13. Marital Status End-->
+			<br>
+			<!--14. Your Height Start-->
+			<div class="main_your_height">
+				<fieldset class="form-group">
+			    	<label for="your_height">14. Your Height </label>
+			    	<input type="text" class="form-control" name="your_height">
+				</fieldset>
+			</div>
+			<!--14. Your Height End-->
+
+			<!--15. History of physical problems Start-->
+			<div class="main_physical_problems">
+				<fieldset class="form-group">
+			    	<label for="physical_problems">15. History of physical problems</label>
+			    	<input type="text" class="form-control" name="physical_problems">
+				</fieldset>
+			</div>
+			<!--15. History of physical problems End-->
+
+			<!--16. What do you prefer(Vegetarian) Start-->
+			<div class="coloum">
+			    <label for="vegetarian" class="control-label input-group">16. What do you prefer? (If you are a Vegetarian)</label>
+			    <div class="btn-group">
+			        <label class="btn btn-default">
+			            <input type="radio" name="vegetarian" id="chicken" value="Chiken">Chicken
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="vegetarian" id="duck" value="Duck">Duck
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="vegetarian" id="goat" value="Goat">Goat
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="vegetarian" id="beef" value="Beef">Beef
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="vegetarian" id="pig" value="Pig">Pig
+			        </label>
+			        <label class="btn btn-default show">
+			            <input type="radio" name="vegetarian" id="ve_other" value="" >Other
+			            <fieldset class="form-group gh">
+							<input type="text" class="form-control" name="vegetarian" id="">
+						</fieldset>
+			        </label>
+			    </div>
+		  	</div>
+			<!--16. What do you prefer(Vegetarian) End-->
+
+			<!--17. What do you prefer(Non-Vegetarian) Start-->
+			<div class="coloum">
+			    <label for="non_vegetarian" class="control-label input-group">17. What do you prefer? (If you are a Non-Vegetarian)</label>
+			    <div class="btn-group">
+			        <label class="btn btn-default">
+			            <input type="radio" name="non_vegetarian" id="sour" value="Sour">Sour
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="non_vegetarian" id="bitter" value="Bitter">Bitter
+			        </label>
+			        <label class="btn btn-default show">
+			            <input type="radio" name="non_vegetarian" id="nve_other" value="" >Other
+			            <fieldset class="form-group gh">
+							<input type="text" class="form-control" name="non_vegetarian" id="">
+						</fieldset>
+			        </label>
+			    </div>
+		  	</div>
+			<!--17. What do you prefer(Non-Vegetarian) End-->
+
+			<!--18. Favourite Color Start-->
+			<div class="coloum">
+			    <label for="color" class="control-label input-group">18. What is your Favourite Color?</label>
+			    <div class="btn-group">
+			        <label class="btn btn-default">
+			            <input type="radio" name="color" id="violet" value="Violet">Violet
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="color" id="indigo" value="Indigo">Indigo
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="color" id="blue" value="Blue">Blue
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="color" id="green" value="Green">Green
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="color" id="yellow" value="Yellow">Yellow
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="color" id="orange" value="Orange">Orange
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="color" id="red" value="Red">Red
+			        </label>
+			    </div>
+		  	</div>
+			<!--18. Favourite Color End-->
+			<br>
+			<!--19. Did you brought up together ? Start-->
+			<div class="coloum">
+			    <label for="brought_up" class="control-label input-group">19. Did you brought up together ?</label>
+			    <div class="btn-group">
+			        <label class="btn btn-default">
+			            <input type="radio" name="brought_up" id="yes" value="Yes">Yes
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="brought_up" id="no" value="No">No
+			        </label>
+			    </div>
+		  	</div>
+			<!--19. Did you brought up together ? End-->
+			<br>
+			<!--20. Is your twin competitor to you ? Start-->
+			<div class="coloum">
+			    <label for="competitor" class="control-label input-group">20. Is your twin competitor to you ?</label>
+			    <div class="btn-group">
+			        <label class="btn btn-default">
+			            <input type="radio" name="competitor" id="yes" value="Yes">Yes
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="competitor" id="no" value="No">No
+			        </label>
+			    </div>
+		  	</div>
+			<!--20. Is your twin competitor to you ? End-->
+			<br>
+			<!--21.Choose your lucky number Start-->
+			<div class="coloum">
+			    <label for="competitor" class="control-label input-group">21.Choose your lucky number.</label>
+			    <div class="btn-group">
+			        <label class="btn btn-default">
+			            <input type="radio" name="competitor" id="" value="0">0
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="competitor" id="" value="1">1
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="competitor" id="" value="2">2
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="competitor" id="" value="3">3
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="competitor" id="" value="4">4
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="competitor" id="" value="5">5
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="competitor" id="" value="6">6
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="competitor" id="" value="7">7
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="competitor" id="" value="8">8
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="competitor" id="" value="9">9
+			        </label>
+			    </div>
+		  	</div>
+			<!--21.Choose your lucky number End-->
+			<br>
+			<!--22.Are you a risk taker ? Start-->
+			<div class="coloum">
+			    <label for="risk_taker" class="control-label input-group">22.Are you a risk taker?</label>
+			    <b>Low</b>&nbsp; &nbsp; &nbsp; &nbsp;
+			    <div class="btn-group">
+			    
+			         <label class="btn btn-default">
+			            <input type="radio" name="risk_taker" id="" value="0">0
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="risk_taker" id="" value="1">1
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="risk_taker" id="" value="2">2
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="risk_taker" id="" value="3">3
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="risk_taker" id="" value="4">4
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="risk_taker" id="" value="5">5
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="risk_taker" id="" value="6">6
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="risk_taker" id="" value="7">7
+			        </label>
+			    </div>
+			    &nbsp; &nbsp; &nbsp; &nbsp;<b>High</b>
+		  	</div>
+			<!--22.Are you a risk taker ? End-->
+			<br>
+			<!--23.Which you are devoted for? Start-->
+			<div class="coloum">
+			    <label for="devoted" class="control-label input-group">23. Which you are devoted for?</label>
+			    <b>Friends</b>&nbsp; &nbsp; &nbsp; &nbsp;
+			    <div class="btn-group">
+			    
+			         <label class="btn btn-default">
+			            <input type="radio" name="devoted" id="" value="0">0
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="devoted" id="" value="1">1
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="devoted" id="" value="2">2
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="devoted" id="" value="3">3
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="devoted" id="" value="4">4
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="devoted" id="" value="5">5
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="devoted" id="" value="6">6
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="devoted" id="" value="7">7
+			        </label>
+			    </div>
+			    &nbsp; &nbsp; &nbsp; &nbsp;<b>Family</b>
+		  	</div>
+			<!--23.Which you are devoted for? End-->
+			<br>
+			<!--24.Who support you most? Start-->
+			<div class="coloum">
+			    <label for="support_you" class="control-label input-group">24. Who support you most?</label>
+			    <b>Father</b>&nbsp; &nbsp; &nbsp; &nbsp;
+			    <div class="btn-group">
+			         <label class="btn btn-default">
+			            <input type="radio" name="support_you" id="" value="0">0
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_you" id="" value="1">1
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_you" id="" value="2">2
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_you" id="" value="3">3
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_you" id="" value="4">4
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_you" id="" value="5">5
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_you" id="" value="6">6
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_you" id="" value="7">7
+			        </label>
+			    </div>
+			    &nbsp; &nbsp; &nbsp; &nbsp;<b>Mother</b>
+		  	</div>
+			<!--24.Who support you most? End-->
+			<br>
+			<!--25.Who support your twin most? Start-->
+			<div class="coloum">
+			    <label for="support_your_twin" class="control-label input-group">24. Who support your twin most?</label>
+			    <b>Father</b>&nbsp; &nbsp; &nbsp; &nbsp;
+			    <div class="btn-group">
+			         <label class="btn btn-default">
+			            <input type="radio" name="support_your_twin" id="" value="0">0
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_your_twin" id="" value="1">1
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_your_twin" id="" value="2">2
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_your_twin" id="" value="3">3
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_your_twin" id="" value="4">4
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_your_twin" id="" value="5">5
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_your_twin" id="" value="6">6
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="support_your_twin" id="" value="7">7
+			        </label>
+			    </div>
+			    &nbsp; &nbsp; &nbsp; &nbsp;<b>Mother</b>
+		  	</div>
+			<!--25.Who support your twin most? End-->
+			<br>
+			<!--26. Which you like most? Start-->
+			<div class="coloum">
+			    <label for="like_you" class="control-label input-group">26. Which you like most?</label>
+			    <b>Fruit</b>&nbsp; &nbsp; &nbsp; &nbsp;
+			    <div class="btn-group">
+			         <label class="btn btn-default">
+			            <input type="radio" name="like_you" id="" value="0">0
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="like_you" id="" value="1">1
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="like_you" id="" value="2">2
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="like_you" id="" value="3">3
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="like_you" id="" value="4">4
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="like_you" id="" value="5">5
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="like_you" id="" value="6">6
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="like_you" id="" value="7">7
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="like_you" id="" value="8">8
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="like_you" id="" value="9">9
+			        </label>
+			    </div>
+			    &nbsp; &nbsp; &nbsp; &nbsp;<b>Flowers</b>
+		  	</div>
+			<!--26. Which you like most? End-->
+			<br>
+			<!--27.How important other peoples punctuality to you ? Start-->
+			<div class="coloum">
+			    <label for="punctuality" class="control-label input-group">27.How important other peoples punctuality to you ?</label>
+			    <b>Less</b>&nbsp; &nbsp; &nbsp; &nbsp;
+			    <div class="btn-group">
+			         <label class="btn btn-default">
+			            <input type="radio" name="punctuality" id="" value="0">0
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="punctuality" id="" value="1">1
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="punctuality" id="" value="2">2
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="punctuality" id="" value="3">3
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="punctuality" id="" value="4">4
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="punctuality" id="" value="5">5
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="punctuality" id="" value="6">6
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="punctuality" id="" value="7">7
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="punctuality" id="" value="8">8
+			        </label>
+			        <label class="btn btn-default">
+			            <input type="radio" name="punctuality" id="" value="9">9
+			        </label>
+			    </div>
+			    &nbsp; &nbsp; &nbsp; &nbsp;<b>More</b>
+		  	</div>
+			<!--27.How important other peoples punctuality to you ? End-->
+			<br>
+
+
+			<label class="checkbox"><input type="checkbox" value="">I agree with terms and comdition.</label>
+
+			<br>
+			<button type="button" name="sumit" class="btn btn-success">Submit</button>
+
+		</form>
+</div>
+{% endblock %}
