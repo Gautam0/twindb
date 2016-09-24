@@ -132,3 +132,17 @@ STATICFILES_DIRS = (
 
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, '../myapp/static')
+
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+ALLOWED_HOSTS = ['*']
+
+DEBUG = True
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass

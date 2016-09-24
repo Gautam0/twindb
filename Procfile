@@ -1,1 +1,1 @@
-web: gunicorn twinapp.wsgi --log-file -
+web: gunicorn twinapp.wsgi
