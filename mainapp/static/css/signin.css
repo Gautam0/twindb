@@ -44,3 +44,7 @@ body {
   margin-top: 120px;
   margin-bottom: 150px;
 }
+.formpage iframe {
+  width: 100% !important;
+  height: 1200px !important;
+}

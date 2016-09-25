@@ -232,17 +232,15 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign up</h2>
-        <label for="inputEmail" class="sr-only">Your Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
+                            <form class="form-signin" method="post" action="/invite">
+                                {% csrf_token %}
+                                <h2 class="form-signin-heading">Invite a Twin</h2>
+                                <label for="inputEmail" class="sr-only">Twin's Email(Either One)</label>
+                                <div>
+                                    {{ form_two.invited_by }}
+                                </div>
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                            </form>
                         </div>
                     </div>
                 </div>
