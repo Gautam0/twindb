@@ -208,14 +208,15 @@
                                 {% csrf_token %}
                                 <h2 class="form-signin-heading">Please sign up</h2> <br>
                                 <div>
-                                    <label for="inputEmail" class="">Your Email address</label>
+                                    <h4>Your Email address</h4>
+                                    <label for="inputEmail" class="sr-only"></label>
                                     {{ form.email_one }}
-                                </div>
-                                <br>
+                                </div><br>
                                 <div>
-                                    <label for="inputEmail" class="">Your Twin's Email address</label>
+                                    <h4>Your Twin's Email address</h4>
+                                    <label for="inputEmail" class="sr-only"></label>
                                     {{ form.email_two }}
-                                </div> <br>
+                                </div><br>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                                                          
                             </form>
@@ -241,10 +242,11 @@
                             <form class="form-signin" method="post" action="/invite">
                                 {% csrf_token %}
                                 <h2 class="form-signin-heading">Invite a Twin</h2> <br>
-                                <label for="inputEmail" class="">Twin's Email(Either One)</label>
+                                <h4>Twin Email(Either One)</h4>
+                                <label for="inputEmail" class="sr-only"></label>
                                 <div>
                                     {{ form_two.invited_by }}
-                                </div> <br>
+                                </div><br>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                             </form>
                         </div>
