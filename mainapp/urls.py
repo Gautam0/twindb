@@ -8,4 +8,6 @@ urlpatterns = [
 	url(r'^emailsubmit$', views.emailsubmit),
 	url(r'^invite$', views.invite),
 	url(r'^thank_page$', views.thank_page),
+	url(r'^thank_page2$', views.thank_page2),
+	url(r'^contact$', views.contact),
 ]

@@ -14,4 +14,11 @@ class Invitation(models.Model):
 	def __str__(self):
 		return (self.invited_by)
 
-		
+class Contact(models.Model):
+	name = models.CharField(max_length=30)
+	mail = models.CharField(max_length=30)
+	phone = models.CharField(max_length=30)
+	message = models.CharField(max_length=500)
+
+	def __str__(self):
+		return(self.name + " and " + self.mail + " and " + self.phone + " and " + self.message)

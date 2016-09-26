@@ -1,6 +1,5 @@
 from django import forms
-
-from .models import UserInfo, Invitation
+from .models import UserInfo, Invitation, Contact
 
 class EmailSubmit(forms.ModelForm):
 
@@ -23,3 +22,15 @@ class InviteForm(forms.ModelForm):
         }
         fields = ('invited_by',)
 
+class ContactForm(forms.ModelForm):
+
+	class Meta:
+		model = Contact
+
+		widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Name'}),
+            'mail': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email', 'type': 'email'}),
+            'phone': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Phone'}),
+            'message': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Message', 'type': 'textarea'}),
+		}
+		fields = ('name','mail','phone','message',)
