@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="" width="400px">
+                    <img class="img-responsive"  alt="" width="400px">
                     <div class="intro-text">
                         <span class="name">Twin Database</span>
                         <hr class="star-light">
@@ -206,15 +206,16 @@
                         <div class="modal-body">
                             <form class="form-signin" method="post" action="/emailsubmit">
                                 {% csrf_token %}
-                                <h2 class="form-signin-heading">Please sign up</h2>
+                                <h2 class="form-signin-heading">Please sign up</h2> <br>
                                 <div>
-                                    <label for="inputEmail" class="sr-only">Your Email address</label>
+                                    <label for="inputEmail" class="">Your Email address</label>
                                     {{ form.email_one }}
                                 </div>
+                                <br>
                                 <div>
-                                    <label for="inputEmail" class="sr-only">Your Twin's Email address</label>
+                                    <label for="inputEmail" class="">Your Twin's Email address</label>
                                     {{ form.email_two }}
-                                </div>
+                                </div> <br>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                                                          
                             </form>
@@ -239,11 +240,11 @@
                         <div class="modal-body">
                             <form class="form-signin" method="post" action="/invite">
                                 {% csrf_token %}
-                                <h2 class="form-signin-heading">Invite a Twin</h2>
-                                <label for="inputEmail" class="sr-only">Twin's Email(Either One)</label>
+                                <h2 class="form-signin-heading">Invite a Twin</h2> <br>
+                                <label for="inputEmail" class="">Twin's Email(Either One)</label>
                                 <div>
                                     {{ form_two.invited_by }}
-                                </div>
+                                </div> <br>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                             </form>
                         </div>
