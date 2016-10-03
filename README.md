@@ -1,44 +1,28 @@
-# python-getting-started
+*** This is a group project conduct by University of Liberal Arts Bangladesh (ULAB) and Indian Statistical Institute (ISI).
 
-A barebones Python app, which can easily be deployed to Heroku.
+*** Twin studies is our research about to examine the overall role of genes and environment in the development of a trait of the twins.
+There are two types of twins, monozygotic (MZ or identical) twins and dizygotic (DZ or fraternal) twins. So we are trying to find out
+which is important for twin's trait. Is it environmental or genetically ?
 
-This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
+*** Beloved sir under whom we are doing this research:
 
-## Running Locally
+* Dr. Garga Chatterjee
+  Research Affiliate at Massachusetts Institute of Technology (MIT)
+  Assistant Professor at Indian Statistical Institute
+  Former Postdoctoral Fellow at Massachusetts Institute of Technology (MIT)
 
-Make sure you have Python [installed properly](http://install.python-guide.org).  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
+* Dr. Nabeel Mohammed
+  Assistant Professor at University of Liberal Arts Bangladesh (ULAB)
 
-```sh
-$ git clone git@github.com:heroku/python-getting-started.git
-$ cd python-getting-started
+* Dr. Abul Kalam Al Azad
+  Postdoc Research Fellow at University of Plymouth and University of Bristol
 
-$ pip install -r requirements.txt
-
-$ createdb python_getting_started
-
-$ python manage.py migrate
-$ python manage.py collectstatic
-
-$ heroku local
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-
-$ heroku run python manage.py migrate
-$ heroku open
-```
-or
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Python on Heroku, see these Dev Center articles:
-
-- [Python on Heroku](https://devcenter.heroku.com/categories/python)
+*** Students who did this Research:
+    * Safina Khan
+    * James Mandal
+    * Obaidullah Tusher
+    * Mahmud Hasan
+    * Nabiduzzaman Khan Sohag
+    * Anwar Zahid
+    * Dil Ware Alam Alvee
+    * Gautam Kumar Shom
